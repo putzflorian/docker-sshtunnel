@@ -1,5 +1,5 @@
 FROM alpine:3.14.0
-
+LABEL maintainer="Florian Putz putzflorian@gmail.com"
 RUN apk add --update openssh-client && rm -rf /var/cache/apk/*
 
 CMD rm -rf /root/.ssh && mkdir /root/.ssh && cp -R /root/ssh/* /root/.ssh/ && chmod -R 600 /root/.ssh/* && \
