@@ -23,4 +23,4 @@ jobs:
       run: docker build . --file Dockerfile --tag putzflorian/docker-ssh-tunnel:${GITHUB_REF/refs\/tags\//}
 
     - name: Docker Push
-      run: docker push putzflorian/docker-ssh-tunnel
+      run: docker push putzflorian/docker-ssh-tunnel:${GITHUB_REF/refs\/tags\//}
